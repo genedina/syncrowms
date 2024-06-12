@@ -1,0 +1,60 @@
+
+.mode-update {
+    background: #FFB347 none repeat scroll 0 0;
+    border: 1px solid #eb5202;
+    color: #eb5202;
+    display: block;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 0 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.mode-export {
+    background: #E5F7FE none repeat scroll 0 0;
+    border: 1px solid #006bb4;
+    color: #006bb4;
+    display: block;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 0 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.complete-status {
+    background: #d0e5a9 none repeat scroll 0 0;
+    border: 1px solid #5b8116;
+    color: #185b00;
+    display: block;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 0 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.closed-status {
+    background: #f9d4d4 none repeat scroll 0 0;
+    border: 1px solid #e22626;
+    color: #e22626;
+    display: block;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 0 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+tr#row_export_orders_set_orders_status_orders_status_mapping > td.value {
+    width: 100%!important;
+}
+select#export_orders_set_orders_status_enable_change_status_order {
+    width: 55%;
+}
+
+.dnp-logo STRONG{
+    background-image: url(dnp_logo.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: auto 17px;
+    padding-left:55px;
+}
+

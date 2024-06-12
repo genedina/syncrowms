@@ -1,0 +1,38 @@
+<button id="wms-button" type="button" class="action-secondary">
+    Syncro with Wms
+</button>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'Magento_Ui/js/modal/alert'
+    ], function ($, alert) {
+        $('#wms-button').on('click', function () {
+            $.ajax({
+                url: '<?php echo $block->getAjaxUrl(); ?>',
+                type: 'POST',
+                data: {
+                    product_id: '<?php echo $block->getRequest()->getParam('id'); ?>'
+                },
+                showLoader: true,
+                success: function (response) {
+                    alert({
+                        title: 'Success',
+                        content: response.message,
+                        actions: {
+                            always: function(){}
+                        }
+                    });
+                },
+                error: function () {
+                    alert({
+                        title: 'Error',
+                        content: 'Something went wrong.',
+                        actions: {
+                            always: function(){}
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script>

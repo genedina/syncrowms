@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="dnp" translate="label" sortOrder="11" class="dnp-logo">
+            <label>dnp</label>
+        </tab>
+        <section id="syncro_wms" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>SYNCRO with WMS</label>
+            <tab>dnp</tab>
+            <resource>Dnp_Syncroaws::config_syncrowms</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Setting</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enabled Error</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="error_message" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Error Message</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="*/*/enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+
+        </section>
+    </system>
+</config>

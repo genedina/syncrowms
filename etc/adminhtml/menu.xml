@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Dnp_Syncrowms::menu" title="Syncro with WMS" module="Dnp_Syncrowms" resource="Dnp_Syncrowms::syncrowms" sortOrder="10"/>
+        <add id="Dnp_Syncrowms::configuration"
+             title="Configuration" module="Dnp_Syncrowms"
+             sortOrder="10" parent="Dnp_Syncrowms::menu"
+             action="admin/system_config/edit/section/syncro_wms"
+             resource="Dnp_Syncrowms::configuration"
+        />
+        <add id="Dnp_Syncrowms::log"
+             title="Logs" module="Dnp_Syncrowms"
+             sortOrder="11" parent="Dnp_Syncrowms::menu"
+             action="dnp_syncrowms/log/index"
+             resource="Dnp_Syncrowms::log"
+        />
+    </menu>
+</config>
